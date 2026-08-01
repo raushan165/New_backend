@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -8,6 +9,7 @@ dotenv.config();
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
@@ -169,60 +171,6 @@ app.get("/api/courses", async (req, res) => {
         });
     }
 });
-//Find my id and delete
-app.delete("/api/courses/:id", async (req, res) => {
-    try {
-        const id = Number(req.params.id);
-
-        const deletedCourse = await Course.findOneAndDelete({ id });
-
-        if (!deletedCourse) {
-            return res.status(404).json({
-                message: "Course not found"
-            });
-        }
-
-        res.status(200).json({
-            message: "Course deleted successfully",
-            course: deletedCourse
-        });
-
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({
-            message: "Internal Server Error"
-        });
-    }
-});
-app.put("/api/courses/:id", async (req, res) => {
-    try {
-        const id = Number(req.params.id);
-
-        const updatedCourse = await Course.findOneAndUpdate(
-            { id }, 
-            req.body,
-            {
-                new: true,
-                runValidators: true
-            }
-        );
-        if (!updatedCourse) {
-            return res.status(404).json({
-                message: "Course not found"
-            });
-        }
-        res.status(200).json({
-            message: "Course updated successfully",
-            course: updatedCourse
-        });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({
-            message: "Internal Server Error"
-        });
-    }
-});
-
 
 // Get Course By ID
 app.get("/api/courses/:id", async (req, res) => {
