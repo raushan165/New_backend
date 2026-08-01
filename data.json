@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "C++ Programming",
+    "price": 4000,
+    "instructor": "Bjarne Stroustrup"
+  },
+  {
+    "id": 2,
+    "title": "Java Programming",
+    "price": 4500,
+    "instructor": "James Gosling"
+  },
+  {
+    "id": 3,
+    "title": "Python Programming",
+    "price": 3500,
+    "instructor": "Guido van Rossum"
+  },
+  {
+    "id": 4,
+    "title": "JavaScript Essentials",
+    "price": 3000,
+    "instructor": "Brendan Eich"
+  },
+  {
+    "id": 5,
+    "title": "React.js Complete Course",
+    "price": 5500,
+    "instructor": "Andrew Mead"
+  },
+  {
+    "id": 6,
+    "title": "Node.js & Express",
+    "price": 5000,
+    "instructor": "Maximilian Schwarzmüller"
+  },
+  {
+    "id": 7,
+    "title": "MongoDB Masterclass",
+    "price": 4800,
+    "instructor": "Mosh Hamedani"
+  },
+  {
+    "id": 8,
+    "title": "MERN Stack Bootcamp",
+    "price": 9000,
+    "instructor": "Brad Traversy"
+  },
+  {
+    "id": 9,
+    "title": "Data Structures & Algorithms",
+    "price": 6500,
+    "instructor": "Abdul Bari"
+  },
+  {
+    "id": 10,
+    "title": "Full Stack Web Development",
+    "price": 12000,
+    "instructor": "Colt Steele"
+  }
+]
